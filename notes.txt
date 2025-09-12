@@ -1,0 +1,6 @@
+Angular : UI framework utilise pour creer des applications mobiles, web
+Utilise Typescript, une architecture basee sur des composants
+le code est donc structure et plus adapte pour une architecture propre
+les composants sont recyclabes / reutilisables
+
+Active router
