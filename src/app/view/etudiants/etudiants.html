@@ -3,9 +3,11 @@
 
 @if (is_isi4) {
     <ol>
-        @for (item of students; track $index) {
-            <li>{{item}}</li>
-        }
+        @for(item of list_students; track $index){
+        <li>{{item.nom}}
+            <a href="details-student/:{{item.matricule}}">Details</a>
+        </li> 
+    }
     </ol>
 }@else {
     <h2 style="color: red; font-weight: bold;">Je ne suis pas en ISI 4</h2>
@@ -13,5 +15,11 @@
 
 <p>Etudiants mineurs</p>
 <ul>
-    <li>{{list_students}}</li>
+    @for(item of list_students; track $index){
+        <li>{{item.nom}}
+            <button (click)="getStu(item)">Details</button>
+        </li> 
+    
+    }
+        
 </ul>

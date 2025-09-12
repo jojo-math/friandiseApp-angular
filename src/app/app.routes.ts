@@ -3,11 +3,20 @@ import { Etudiants } from './view/etudiants/etudiants';
 import { Navbar } from './view/navbar/navbar';
 import { Footer } from './view/footer/footer';
 import { About } from './about/about';
+import { DetailsStudent } from './views/details-student/details-student';
 
 export const routes: Routes = [
     {
         path: 'etudiants',
-        component: Etudiants
+        component: Etudiants,
+    },
+    {
+        path: 'details-student/:matricule',
+        component: DetailsStudent
+    },
+    {
+        path: 'details-student/:matricule/:classe',
+        component: DetailsStudent
     },
     {
         path: 'navbar',
