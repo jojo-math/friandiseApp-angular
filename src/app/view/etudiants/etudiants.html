@@ -1,9 +1,12 @@
 <h1> Classe : {{txtClass}}</h1>
 <p>Liste des étudiants portant des lunettes</p>
-<ol>
-    <li>KOUANG</li>
-    <li>MOUGANG</li>
-    <li>BILOGUE</li>
-    <li>KOUBISSACK</li>
-    <li>DONGMO</li>
-</ol>
+
+@if (is_isi4) {
+    <ol>
+        @for (item of students; track $index) {
+            <li>{{item}}</li>
+        }
+    </ol>
+}@else {
+    <h2 style="color: red; font-weight: bold;">Je ne suis pas en ISI 4</h2>
+}

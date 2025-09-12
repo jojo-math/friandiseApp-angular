@@ -14,4 +14,6 @@ import { Component } from '@angular/core';
 export class Etudiants {
     txtClass: string = "ISI 4";
     private matricule: string = "2024-ISI-001";
+    is_isi4: boolean = true;
+    public students: string[] = ['KOUANG', 'KOUBISSACK', 'BILOGUE', 'DONGMO', 'MOUGANG'];
 }
