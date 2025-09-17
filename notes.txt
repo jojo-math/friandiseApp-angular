@@ -4,3 +4,24 @@ le code est donc structure et plus adapte pour une architecture propre
 les composants sont recyclabes / reutilisables
 
 Active router
+architecture logicielle : ens. des elts permettant de realiser un logiciel
+
+fichier .spec.ts pour les tests unitaires
+
+MVC architecture :
+
+Views -- Controller -- Models
+exemples :
+views : etudiant.html , Controller : etudiants.ts, Models : data, services, interface (toujours en .ts)
+ca permet de scinder le travail sur le frontend (bcp + structure)
+toutes les actions integrees dans les pages html doivent etre enregistrees dans le Controller
+Views n'est pas que pour le design visuel mais contienr l'appelentio
+Controller permet de facilement mettre a jour les donnes entre le service et et le modele
+View = Template + donnee injectee
+
+Conteneur de compossants (comme avec child et parent) :
+Conteneur de composants : etudiant.ts via app-etudiant qui peut recevoir des proprietes eg. <app-etudiant [etudiant] ="sdffd..." /> et app-etudiant est appele dans etudiant.html
+Ici, etudiant.html est le Conteneur de composants et app-etudiant le Conteneur de presentation
+les parametres et evenements permettent d'etendre l'independance d'un composant
+e.g de parametre <app-etudiant [etu]="etudiantsList[0]" />
+ici, etu est le nom d'une variable et etudiantsList est la liste des etudiants definie dans etudiants.ts

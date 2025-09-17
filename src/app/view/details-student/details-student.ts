@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Etudiants } from '../../view/etudiants/etudiants';
+import { Etudiants } from '../etudiants/etudiants';
 import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-details-student',

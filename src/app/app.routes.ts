@@ -3,7 +3,7 @@ import { Etudiants } from './view/etudiants/etudiants';
 import { Navbar } from './view/navbar/navbar';
 import { Footer } from './view/footer/footer';
 import { About } from './about/about';
-import { DetailsStudent } from './views/details-student/details-student';
+import { DetailsStudent } from './view/details-student/details-student';
 
 export const routes: Routes = [
     {
