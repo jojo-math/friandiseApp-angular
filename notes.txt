@@ -25,3 +25,4 @@ Ici, etudiant.html est le Conteneur de composants et app-etudiant le Conteneur d
 les parametres et evenements permettent d'etendre l'independance d'un composant
 e.g de parametre <app-etudiant [etu]="etudiantsList[0]" />
 ici, etu est le nom d'une variable et etudiantsList est la liste des etudiants definie dans etudiants.ts
+etu doit etre du meme type que la classe definie dans etudiants.ts
