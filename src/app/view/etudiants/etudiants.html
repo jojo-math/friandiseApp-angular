@@ -1,4 +1,4 @@
-<h1> Classe : {{txtClass}}</h1>
+<!-- <h1> Classe : {{txtClass}}</h1>
 <p>Liste des étudiants portant des lunettes</p>
 
 @if (is_isi4) {
@@ -22,4 +22,8 @@
     
     }
         
-</ul>
+</ul> -->
+<h3 class="text-3xl p-4x bg-gray-200">Liste des etudiants</h3>
+@for (item of etudiantsList; track $index) {
+    <app-student [etu]="item"></app-student>
+}

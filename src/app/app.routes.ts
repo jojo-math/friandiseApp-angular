@@ -3,6 +3,7 @@ import { Etudiants } from './view/etudiants/etudiants';
 import { Navbar } from './view/navbar/navbar';
 import { Footer } from './view/footer/footer';
 import { About } from './about/about';
+import { Student } from './components/student/student';
 import { DetailsStudent } from './view/details-student/details-student';
 
 export const routes: Routes = [
@@ -29,5 +30,9 @@ export const routes: Routes = [
     {
         path: 'about',
         component: About
+    },
+    {
+        path: 'student',
+        component: Student
     }
 ];

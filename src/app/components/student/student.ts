@@ -8,6 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 
 
+
 export class Student {
-  @Input() etudiant!:Etudiant
+  @Input() etu!:Etudiant | null;
+
+  
 }
