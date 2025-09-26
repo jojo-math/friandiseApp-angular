@@ -7,3 +7,9 @@ li{
 ul{
     opacity:20;
 }
+@keyframes blob {
+    0%   { transform: translate(0,0) scale(1); }
+    33%  { transform: translate(10%, -8%) scale(1.15); }
+    66%  { transform: translate(-8%, 12%) scale(0.9); }
+    100% { transform: translate(0,0) scale(1); }
+  }
