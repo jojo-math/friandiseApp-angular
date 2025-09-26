@@ -37,11 +37,31 @@ export class Etudiants {
     // ];
     
     public etudiantsList:Etudiant[] = [
-    {matricule:"2223i036", nom:"MELONG", prenom:"Joan", dateNaissance:"2000-04-23"},
-    {matricule:"2223i037", nom:"KOUANG", prenom:"Darlene", dateNaissance:"2000-04-23"},
-    {matricule:"2223i123", nom:"DJIDAWO", dateNaissance:"2000-04-23"},
-    {matricule:"2223i098", nom:"LOWE", prenom:"Enzo", dateNaissance:"2000-04-23"},
-    {matricule:"2223i204", nom:"KOUBISSACK", prenom:"Lucie", dateNaissance:"2000-04-23"}
+    {
+      matricule: "2223i036", nom: "MELONG", prenom: "Joan", dateNaissance: "2000-04-23",
+      noteCC: 18,
+      noteSN: 15
+    },
+    {
+      matricule: "2223i037", nom: "KOUANG", prenom: "Darlene", dateNaissance: "2000-04-23",
+      noteCC: 13,
+      noteSN: 20
+    },
+    {
+      matricule: "2223i123", nom: "DJIDAWO", dateNaissance: "2000-04-23",
+      noteCC: 2,
+      noteSN: 18
+    },
+    {
+      matricule: "2223i098", nom: "LOWE", prenom: "Enzo", dateNaissance: "2000-04-23",
+      noteCC: 9,
+      noteSN: 11
+    },
+    {
+      matricule: "2223i204", nom: "KOUBISSACK", prenom: "Lucie", dateNaissance: "2000-04-23",
+      noteCC: 11,
+      noteSN: 10
+    }
   ]
 
     constructor(private router:Router){
@@ -50,6 +70,10 @@ export class Etudiants {
     public getStu(objEtudiant: Etudiant): void{
       this.router.navigate(['/details-student'], {state: objEtudiant});
       // return this.list_students.find(student => student.matricule === matricule);
+    }
+
+    showMoy(moy: number){
+        alert(`La moyenne est : ${moy}`)
     }
 
   }

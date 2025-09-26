@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-student',
@@ -10,7 +10,11 @@ import { Component, Input } from '@angular/core';
 
 
 export class Student {
-  @Input() etu!:Etudiant | null;
+  @Input() etu!:Etudiant;
+  @Output() moyenneG : EventEmitter<number> = new EventEmitter<number>();
 
-  
+  computeMoyene(){
+    const moy = (this.etu.noteCC * 0.3 + this.etu.noteSN * 0.7);
+    this.moyenneG.emit(moy);
+  }
 }

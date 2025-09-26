@@ -23,7 +23,10 @@
     }
         
 </ul> -->
-<h3 class="text-3xl p-4x bg-gray-200">Liste des etudiants</h3>
+<div class="justify-center items-center">
+    <h3 class="flex text-3xl p-4x bg-blue-600/60 border-2 px-2 justify-center">INGE 4 ISI FR</h3>
+</div>
 @for (item of etudiantsList; track $index) {
-    <app-student [etu]="item"></app-student>
+    <app-student [etu]="item" (moyenneG)="showMoy($event)" class="flex-3 "/>
+    
 }
