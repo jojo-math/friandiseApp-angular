@@ -1,16 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Student } from "../../components/student/student";
-// interface Etudiant{
-//   matricule: string,
-//   nom: string;
-//   prenom: string;
-//   classe: string;
-//   dateNaissance?: string;
-//   sexe: string;
-//   filiere: string;
-//   niveau: string;
-// }
 
 @Component({
   selector: 'app-etudiants',
