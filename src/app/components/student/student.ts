@@ -1,5 +1,6 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { ClientService } from '../../providers/client.service';
+import { Api } from '../../providers/api';
 
 @Component({
   selector: 'app-student',
@@ -50,4 +51,7 @@ export class Student {
     });
     this.stepThree(result, (n:number) => (console.log(` Result three : ${n}`)));
   }
+
+
+  
 }

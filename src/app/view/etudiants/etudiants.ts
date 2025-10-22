@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Student } from "../../components/student/student";
+import { Api } from '../../providers/api';
+import { inject } from '@angular/core/primitives/di';
 
 @Component({
   selector: 'app-etudiants',
@@ -65,5 +67,15 @@ export class Etudiants {
     showMoy(moy: number){
         alert(`La moyenne est : ${moy}`)
     }
-
-  }
+      // private catServ: Api = inject(Api);
+      // ngAfterViewInit(): void{
+      //     this.catServ.getListChat();
+      // }
+      private apiService: Api = inject(Api);
+    ngAfterViewInit(): void {
+      console.log('Fetching data from API...');
+      console.log(this.apiService.getListChat((data: any) => {
+            console.log(data);
+        }));
+    }
+}
