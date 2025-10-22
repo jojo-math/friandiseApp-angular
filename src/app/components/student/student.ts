@@ -30,4 +30,23 @@ export class Student {
     console.log(this.clientServ.sayHello());
     console.log(this.clientServ.sayGoodBye(this))
   }
+  stepOne(val: number, callback?: any){
+    const result = val + 1;
+    
+    callback(result);
+    this.stepTwo(result, (n:number) => (console.log(` Result two : ${n}`)));
+  }
+  stepTwo(val: number, callback?: any){
+    const result = val + 20;
+    callback(result);
+  }
+  stepThree(val: number, callback?: any){
+    const result = val + 3;
+    callback(result);
+  }
+  ngAfterViewInit(): void{
+    let result: number = 0;
+    this.stepOne(result, (n:number) => (console.log(` Result one : ${n}`)));
+    this.stepThree(result, (n:number) => (console.log(` Result three : ${n}`)));
+  }
 }
