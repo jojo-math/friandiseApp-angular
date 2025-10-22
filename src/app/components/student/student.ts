@@ -32,9 +32,7 @@ export class Student {
   }
   stepOne(val: number, callback?: any){
     const result = val + 1;
-    
     callback(result);
-    this.stepTwo(result, (n:number) => (console.log(` Result two : ${n}`)));
   }
   stepTwo(val: number, callback?: any){
     const result = val + 20;
@@ -46,7 +44,10 @@ export class Student {
   }
   ngAfterViewInit(): void{
     let result: number = 0;
-    this.stepOne(result, (n:number) => (console.log(` Result one : ${n}`)));
+    this.stepOne(result, (reponse1:number) => {
+      (console.log(` Result one : ${reponse1}`));
+      this.stepTwo(reponse1, (reponse2:number) => (console.log(` Result two : ${reponse2}`)));
+    });
     this.stepThree(result, (n:number) => (console.log(` Result three : ${n}`)));
   }
 }
