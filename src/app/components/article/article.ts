@@ -8,6 +8,6 @@ import { IArticle } from '../../interface/article';
   styleUrl: './article.scss'
 })
 export class Article {
-  @Input() article: IArticle;
+  @Input() article!: IArticle;
 
 }

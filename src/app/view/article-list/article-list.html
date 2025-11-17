@@ -1,1 +1,6 @@
-<p>article-list works!</p>
+<p>Liste des articles</p>
+<div>
+    @for (item of articles; track $index) {
+        <app-article [article]="item" ></app-article>
+    }
+</div>
