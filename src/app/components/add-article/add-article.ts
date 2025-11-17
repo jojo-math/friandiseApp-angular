@@ -4,11 +4,16 @@ import { NotifPanier } from '../../services/notif-panier';
 
 @Component({
   selector: 'app-add-article',
-  imports: [Badge],
+  imports: [],
   templateUrl: './add-article.html',
   styleUrl: './add-article.scss'
 })
 export class AddArticle {
-  private n1:number = 0;
-  private numServ:NotifPanier = inject(NotifPanier);
+  public notification_sent:number = 0;
+  public numServ:NotifPanier = inject(NotifPanier);
+
+  addNotification(){
+    this.notification_sent++;
+    this.numServ.setNotification(this.notification_sent);
+  }
 }

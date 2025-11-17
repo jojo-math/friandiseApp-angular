@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { AddArticle } from '../add-article/add-article';
+import { NotifPanier } from '../../services/notif-panier';
 
 @Component({
   selector: 'app-badge',
@@ -7,8 +9,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './badge.scss'
 })
 export class Badge {
-    public nb:number = 0;
-    constructor(){
-      console.log(this.nb);
+    public notifications:number = 0;
+    private notifServ: NotifPanier = inject(NotifPanier);
+    ngAfterViewInit(): void {
+      //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+      //Add 'implements AfterViewInit' to the class.
+      this.notifServ.getNotification().subscribe(counter => { this.notifications = counter });
     }
 }
