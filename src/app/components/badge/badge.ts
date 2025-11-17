@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-badge',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './badge.scss'
 })
 export class Badge {
-
+    public nb:number = 0;
+    constructor(){
+      console.log(this.nb);
+    }
 }

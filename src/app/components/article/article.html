@@ -1,3 +1,8 @@
-<p>{{article.nom}}</p>
-<p>{{article.description}}</p>
-<p>{{article.prixU}}</p>
+<div class="flex p-4 m-2 border border-gray-300 rounded-lg shadow-lg flex-col">
+    <div class="flex justify-between ìtems-center mb-2 space-between">
+        <p class="">{{article.nom}}</p>
+        <p class="font-bold">{{article.prixU}} FCFA</p>
+    </div>
+    <p>{{article.description}}</p>
+    <app-add-article></app-add-article>
+</div>
